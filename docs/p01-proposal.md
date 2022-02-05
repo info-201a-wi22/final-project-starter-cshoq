@@ -1,32 +1,97 @@
-# Title of your Project: Project Proposal 
+# The Concussion Conundrum
 
-**TODO**: Edit this file. Your project proposal goes here. Save and delete the developer notes when done.
+_(NFL-CD)_
 
-## Developer Notes
+**Nathan Ellisen, Cullen Shoquist, Gray Hooper, Andrew Le**
 
-* **Where is the project brief?**  [`../instructions/project-design-brief.pdf`](../instructions/project-design-brief.pdf).
-* **Making Progress**: We understand this work might be difficult. Also, we understand that your project ideas might not be completely worked out. So, we ask that you do the best you can. You will receive specific guidance from your TA and constructive feedback. We are confident that you will succeed! 
-* **What should be included in the proposal?** Every proposal will be different. It depends on your particular project.  That said, in the table below you will find the expected report elements.  It is important that you engage with and respond to the the Design Brief. 
-* **How should the proposal be formatted?** You should format your proposal using Markdown in this file. You should aim for a professional presentation - clear, concise, interesting, and free of spelling and grammatical errors. 
-* **What headings should we use?** As needed, the suggested headings below can be revised and new headings and sub-headings can be added. Please use headings, bullet lists, tables, figures, and other markdown code effectively - seek a professional presentation. 
-* **Finishing up.** When you are finished writing and formatting your proposal, save these developer notes(they might useful in the future). Then, delete them.
-* **Questions?** If you have questions, please ask your TA or post on Teams.
+_nathanellisen@gmail.com, cullenshoquist@gmail.com, gnhooper@uw.edu, ale527@uw.edu_
 
-|Element | Brief Description|
-|---------------| --------------
-|Code name | Give your project a _code name_, a short, evocative name for efficiently referring to your project. Your code name does not change! Examples: _Jazz-4_, _Rocking Fish_, etc. | 
-|Project title| Give your project a concise, interesting title that summarizes the entirety of your project. (Your title can change on subsequent deliverables.) |
-|Authors | Names of your team members and contact information (email addresses). |
-|Affiliation |  INFO-201: Technical Foundations of Informatics - The Information School - University of Washington |
-|Date | Winter 2022|
-|Abstract | No more than three sentences that summarize your project. Focus on the very most important aspects. For example: **(1)** "Our main question is .... This question is important because .... To address the question, we will ...." **(2)** "We are concerned with ..., becuase .... To address this concern, we plan to ...." **(3)** "Consider that ....  This is important because .... Accordingly, we plan to ...."   |
-|Keywords | 3-5 keywords that summarize your project.  (e.g., "Keywords: human physiology; bicycle exercise; elderly; power and heart rate times-series data") |
-|1.0 Introduction | Briefly introduce your project. (about 150 words) |
-|2.0 Design Situation | Use short sub-sections to describe your topic and the setting (that is, the sociotechnical situation), including project framing, human values, direct and indirect stakeholders, possible harms and benefits. See the Design Brief, section B.3. **Note**: You *must* include three citations to related work (URLs to similar work, high quality articles from the popular press, reseach papers, etc. ). You may find it helpful to include a figure.  (about 400 words) |
-|3.0 Research questions | 3-5 research questions. What motivates the questions? Why are they important? See the Deign Brief, section B.4. (about 150 words) |
-|4.0 The Dataset | See Design Brief, setions B.5 (_Size and complexity_) and B.6 (_Data provenance_). Use short sub-sections for describing the size and complexity of the dataset and for describing the origins fo the data. (about 400 words) |
-|5.0 Expected Implications | Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (about 150 words) |
-|6.0 Limitations | What limitations might you need to address? Briefly discuss. (about 150 words) |
-|Acknowledgements | Is there anyone you would like to thank? A librarian who helped you with your research? A Teaching Assistant? A friend who helped you find your data? Say thank you in this section.|
-|References | Include citations to your three references. See 2.0 Introduction. If you like, you can cite more than three references.  Please use a standard citation style of your choice.  See [Citing Sources](https://guides.lib.uw.edu/research/citations) at the UW Library. |
-|Appendix A: Questions| Do you have questions for your TA or instructor?  Include them here.|
+Info-201: Technical Foundations of Informatics - The Information School - Univeristy of Washington
+
+Winter 2022
+
+### Our Goal
+
+We are concerned with how the number of concussion that occur in the NFL correlate with various predetermined pertinent information that could correlate with the causation of a concussion. To address this concern, we plan to compare data on a game-by-game basis of concussions recorded versus the players demographics, team data, and game by game information to get to the bottom of what could be a predictor of more/less concussion in a game and for a player.
+
+### Keywords
+Concussion, NFL, Age, Team, Football, Sports
+
+## 1.0 Introduction
+
+Known as “America’s sport,” football is a game that is celebrated across the country. Consisting of spectacular feats of athletic performance, football woos everyone who watches- but what about the players? With these feats of athleticism comes repercussions for the players- and most commonly, head injuries and neurological damage. With the nature of the game, there isn’t much that could be done to reduce these injuries without completely changing the culture and rulings of the game. Although it would be beneficial for the players, they disagree with any kind of change to the game, and almost accept head injuries as a guarantee and cost of playing football at a high level. However, head injuries occur at every level of the sport, and with exploration of data, and context of the sport we can come up with some sort of solution that will not hinder the experience of the sport, as well as maximize the safety of the players.
+
+## 2.0 Design situation
+
+It is well known that concussions are a hot topic in the NFL. NFL’s management consistently denies any wrongdoing and seemingly implements unhelpful rules every time the issue reaches the public arena. Clearly there is a lot at stake with the issue, so let’s break it down into a few components.
+
+**The Issue Itself:**
+
+Athletes and their family/friends across the world are aware of the dangers of concussions. But what really is the concern? According to Missouri Health Care, Chronic Traumatic Encephalopathy, hereafter referred to as CTE, is the primary long-term effect of repeated concussions. CTE “causes the brain to break down, leading to memory loss, depression, and even dementia.” Clearly these are dangers that the NFL and every football player/parent should be aware of.
+
+**The Opinions in Play:**
+
+The most prominent and polarized opinions lie either in trying to protect the players themselves or the game of football. Those with serious concern for the players, oftentimes parents of children growing up playing the sport, think the NFL sets the standard for the rest of football play across the country. According to CNBC, “90 out of 94 deceased former NFL players had brains that showed evidence of brain disease”, and parents feel the NFL has a responsibility to create a safe playing space that will trickle down to pee-wee football. On the other hand, many football traditionalists feel the many rule changes the NFL has already put into place are more than enough. This includes many current players who don’t want the game they group up loving to change drastically. According to the University of Rochester’s Campus Times, “Redskins safety D.J. Swearinger claimed that he ‘didn’t sign up to play two-hand touch’ while Vikings safety Andrew Sendejo has been seen wearing a ‘Make Football Violent Again’ hat”. Clearly there are varying stances on the matter.
+
+**Stakeholders:**
+
+The primary stakeholders are of course the players and the NFL itself. Franchises need to make money, as do players, and that all comes from viewership. If the NFL were to all of a sudden switch to “two-hand touch”, they surely would lose much viewership. However, if they keep consistently losing players to CTE, they also will lose viewership. Additionally, players scared of the dangers of concussions and CTE are more likely to side with those wanting more regulation, whereas many defenders such as Swearinger and Sendejo want the game to remain the traditional game it has always been. Indirect stakeholders would surely include those with personal connections to both owners and players, alongside the fans who watch the games and want the most entertaining of media.
+
+**Impacts of Data and Technology:**
+
+The NFL has used data and technology many times to assess the concern surrounding concussions. Certainly the primary flaw in this strategy is it reduces human lives into numbers. Yes, we can count the number of concussions results using various rules, and can use data to theorize what strategy will work to maximize profit and minimize danger. Yet, this problem can’t be reduced to just numbers. There are too many factors at play to create a comprehensive solution with data alone. That being said, using statistics to make predictions about what rules and regulations the NFL implements to maximize safety and keep the sport we love are great, so long as they are judged from a qualitative perspective for its true impacts before implementation.
+
+**_Works Cited_**
+
+[Concussion Impact](https://www.justicepays.com/learning/injury/why-concussions-are-so-dangerous-and-can-leave-lasting-problems#:~:text=If%20someone%20suffers%20enough%20concussions,%2C%20depression%2C%20and%20even%20dementia)
+
+[NFL Policy Changes](https://www.cnbc.com/2016/04/24/nfl-needs-big-changes-to-concussion-policy-and-so-does-everyone-else-expert.html)
+
+["The NFL is Soft"](http://www.campustimes.org/2018/10/04/are-nfl-rule-changes-making-the-league-soft/)
+
+_For Proper Citations See "References"_
+
+
+## 3.0 Research Questions
+
+**What factors contribute the most to concussions?**
+
+**Do the factors most to blame pertain more to certain positions over others?**
+
+**Are the primary contributors to concussions preventable?**
+
+**Can these findings help inform more safety protocols for the NFL?**
+
+These research questions are motivated by a desire to uncover factors contributing to concussions in NFL players that may have been overlooked in the past. Ideally, findings of this nature would propel the NFL to consider new safety protocols in new parts of the game. This is important because brain damage from football is a problem that has garnered some attention, but still has not been addressed fully. The hope is that when considering a dataset like this some new potential contributors to concussions and CTE may be uncovered.
+
+## 4.0 The dataset
+
+As our group decided to look at concussion data for players in the NFL, we wanted a good sized data set. Because there are less than 2000 players in the league and not all of them always get concussions, we knew it would take multiple seasons to get enough data. We were able to find a data set that spanned from the years 2012-2014, three seasons worth of concussion data. Over three seasons, our data set has logged 393 concussions. While this data set size is on the smaller side, the NFL has such a small set of observable subjects that a 25% population size sample felt very appropriate. The other reason we thought this was an adequate data set was because it had so much data on each concussion, with 18 different columns of information spanning from opponent in game concussed, to previous injury history, to weeks out due to injury. This high level of detail about each concussion will allow us to make groupings  and find different patterns within the data to help us figure out factors that play into concussions as well as finding ways in which the league may be lacking in their protocol.
+The specific entries are by each diagnosed concussion that has taken place in the NFL (there are probably many concussions in the NFL that go undiagnosed that are not included). The player that received the concussion is also logged and will serve as our key to find certain incidents and keep track of rows. NFL data is pretty public knowledge, with NFL injuries and stats being posted all over websites like ESPN and NFL.com. We found our data on Kaggle.com but there it acknowledges user Alice C on data.world for creating the original data set. While Alice C is not a widely known figure, The data appears to be accurate as we have checked on a few selected concussions listed with our own research and they have matched up, leading us to believe the data set is trustworthy. Assumably, this data is collected for the purpose of highlighting the NFL’s continuous concussion problem, which has been an on going issue in the NFL ever since research has come out regarding the negative effects of concussions long term. There is no one directly profiting from this data as it was all freely available but those who wish to shed light on the NFL’s concussion issue may benefit from the data as others will see what they have found.
+
+## 5.0 Expected Implications
+
+If we are able to find some interesting correlative relationships in this dataset, there could be some large implications for the NFL. The NFL has gotten a lot better about implementing safety rules both on and off the field to help address the growing prevalence of CTE in its players, but more can still be done. Finding trends in this dataset could go to help the NFL design more rules to prevent brain damage, and further than that, if the findings were to go public the NFL would face a lot of pressure to implement changes to reflect the findings. In this way, working with the research questions and this dataset could have extensive implications for the brain health of players in the NFL.
+
+## 6.0 Limitations
+
+The limitations that are needed to address would be the context of the sport aside from the data. The data in the end is just numbers, and with football- and a lot of sports, not everything is about numbers. There is context that is not shown within the data set, and that cannot be measured using code- and must be taken into account. The narratives at play, the social repercussions, the impacts on the sport, and the morales of those involved is just not something that you can quantify. Although a solution can be brought forth using the data of the seasons played, will the solution work how we want? Will the people react to the solution as intended?
+
+### Acknowledgements
+
+We would like to thank the creator of this data set on Kaggle for publicizing this data.
+
+### References
+
+#### _Works Cited_
+
+##### Cez Garcia "Are NFL Rule Changes Making the League 'Soft'?"
+  October 04, 2018, et al. “Are NFL Rule Changes Making the League ‘Soft’?” Campus Times, 8 Oct. 2018,
+http://www.campustimes.org/2018/10/04/are-nfl-rule-changes-making-the-league-soft/.
+
+
+##### Goldman, David L. “Why Concussions Are so Dangerous and Can Leave Lasting Problems.”
+Goldman Babboni Fernandez & Walsh Auto Accidents Personal Injury, 2016, https://www.justicepays.com/learning/injury/why-concussions-are-so-dangerous-and-can-leave-lasting-problems#:~:text=If%20someone%20suffers%20enough%20concussions,%2C%20depression%2C%20and%20even%20dementia.
+
+##### trentCNBC. “NFL Needs Big Changes to Concussion Policy, and so Does Everyone Else: Expert.”
+CNBC, CNBC, 24 Apr. 2016, https://www.cnbc.com/2016/04/24/nfl-needs-big-changes-to-concussion-policy-and-so-does-everyone-else-expert.html.
