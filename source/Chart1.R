@@ -7,7 +7,6 @@ library(tidyverse)
 library(ggplot2)
 
 concussions <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-cshoq/main/data/Concussion-Injuries-2012-2014.csv")
-View(concussions)
 
 ggplot(concussions, aes(x = Total.Snaps)) + 
   geom_histogram(binwidth = 10, color = "darkblue", fill = "lightblue") +
