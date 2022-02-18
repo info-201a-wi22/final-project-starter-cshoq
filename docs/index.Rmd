@@ -5,26 +5,25 @@ date: "2/18/2022"
 output: html_document
 ---
 
-```{r table, echo = FALSE}
+```{r table, echo = FALSE, include = FALSE}
+source("../source/table.R", print.eval = TRUE)
 library(dplyr)
 library(stringr)
 library(data.table)
-source("../source/table.R")
 ```
 
-
-```{r chart1, echo = FALSE}
-library(ggplot2)
+```{r chart1, echo = FALSE, include = FALSE}
+source("../source/Chart1.R", print.eval = TRUE)
+library(tidyverse)
 library(knitr)
-source("../source/Chart1.R")
 ```
 
 ### This chart was intended to show if there is a relationship between the number of snaps taken before concussion and the frequency at which concussions occur at the given number of snaps. The chart indicates that concussions are more likely to occur earlier in the game (centered at 15 to 25 snaps). The frequency of concussion peaks at this bin and decreases gradually as the number of snaps increases.
 
-```{r chart2, echo = FALSE}
+```{r chart2, echo = FALSE, include = FALSE}
+source("../source/Chart2.R", print.eval = TRUE)
 library(leaflet)
 library(knitr)
-source("../source/Chart2.R")
 ```
 
 ### This chart shows the frequency in which concussions occurred over the course of the season. It is somewhat clear that there is a slight correlation to how early in the season the concussion occurred and the frequency that other concussions occured. In other words, in earlier weeks during the season, it appears slightly more concussion occur. 

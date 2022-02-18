@@ -1,8 +1,10 @@
-concussions <- read.csv("data/ConcussionInjuries2012_2014.csv")
 
+concussions <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-cshoq/main/data/Concussion-Injuries-2012-2014.csv")
+install.packages(data.table)
 library(dplyr)
 library(stringr)
-library(data.table)
+library("data.table")
+
 concussions$Play.Time.After.Injury <- gsub("downs", "", as.character(concussions$Play.Time.After.Injury)) 
 concussions$Average.Playtime.Before.Injury <- gsub("downs", "", as.character(concussions$Average.Playtime.Before.Injury))
 concussions$Play.Time.After.Injury <- gsub("Did not return from injury", "", as.character(concussions$Play.Time.After.Injury)) 

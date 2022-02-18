@@ -19,4 +19,3 @@ absence_freq <- as.vector((absence_table$Freq))
 plot(absence_freq, type = "o" , xlab = "Games Missed Post concussion", ylab = "Frequency", main = "Games Missed Due to Concussions Chart") 
 
 
-
