@@ -5,34 +5,54 @@ date: "2/18/2022"
 output: html_document
 ---
 
-```{r table, echo = FALSE, include = FALSE}
+```{r values, echo = FALSE, message = FALSE}
+source("../source/values.R", print.eval = TRUE)
+library(dplyr)
+```
+
+#### For the first function we wanted to see how many games the average player missed due to concussion, which we found to be `r games_missed` We thought that this would be a valuable value to get as it would allow us to assess either the severity of the concussions. Our result came out to less than one game missed per concussion. This is concerning as it potentially means that the NFL is not taking concussions as seriously as they should.
+
+#### For the next function we wanted to see which team had the most concussion, which we found to be `r concussions_by_team` We thought this would be a valuable value as it would allow us to see if teams were doing dramatically better than others with concussion prevention. It turned out that the Bengals and Browns had the most concussion and those teams should assess their concussion prevention protocol.
+
+#### For this function we wanted to see which position had the most concussions, which we found to be `r concussions_by_position` We thought it would be valuable to look at if certain positions were “more dangerous” than others. It turned out that cornerback was the most dangerous position. This data should shape people's decision of what position to play.
+
+#### For this function we wanted to see which month had the most concussions, which we found to be `r concussions_by_month` We thought it would be valuable to look at if certain months were potentially the most dangerous and draw conclusions based on that.The highest month was September, maybe due to players hitting harder at the start of the season. The league should look to more tightly enforce unnecessary roughness penalties at the start of the season.
+
+#### For this last function we wanted to see if there was a connection between pre-season injuries and concussion. We thought it would be valuable to look at because re-injury is often a problem, especially with head injuries. It turned out to be only `r had_preseason_injury` of players who were concussed had an injury in the pre-season.
+
+```{r table, echo = FALSE, message = FALSE}
 source("../source/table.R", print.eval = TRUE)
 library(dplyr)
 library(stringr)
 library(data.table)
+library(knitr)
+kable(position_table)
 ```
 
-```{r chart1, echo = FALSE, include = FALSE}
+#### This table is showcasing the statistics of concussion injuries, and the frequency of which the injuries occur in each position played in the NFL from the 2012 to the 2014 season. Following this would be the specific details of the injury, such as when it happened, how long they were out for, how long they played to get it, and how long they played after it. The reason the data is sorted by position is because we wanted to see if there were patterns that followed across both sides of the football, and what positions were most affected by it most. We then further categorized it down to how much time the player is out, to showcase the short-term effects of the concussion. We then move onto the more performance side of things, as we explore to find a pattern of how many downs/plays occurs before someone gets a concussion, and most surprisingly, how many plays that same player plays with a concussion, an issue that is very prevalent in football. On average, Shrugging off major head injuries is common in the NFL, and because of this, it leads to long term deficits. With the findings provided, the conclusion can be made that those who are playing a defensive position are most prone to concussions, while those on offense suffer the least amount of concussions- with the defensive positions undergoing 179 out of the 318 recorded concussions, with the Cornerback position having the highest recorded concussions with 53. The offensive positions suffered a total of 139 concussions recorded, with the Wide Receivers recording a high of 46. The conclusion can be made that those on the defensive end suffer the most concussions, with the concussion numbers spread out of all positions, while the offensive end has the Wide Receivers recorded the bulk of the observations.
+
+
+```{r chart1, echo = FALSE, message = FALSE}
 source("../source/Chart1.R", print.eval = TRUE)
 library(tidyverse)
 library(knitr)
 ```
 
-### This chart was intended to show if there is a relationship between the number of snaps taken before concussion and the frequency at which concussions occur at the given number of snaps. The chart indicates that concussions are more likely to occur earlier in the game (centered at 15 to 25 snaps). The frequency of concussion peaks at this bin and decreases gradually as the number of snaps increases.
+#### This chart was intended to show if there is a relationship between the number of snaps taken before concussion and the frequency at which concussions occur at the given number of snaps. The chart indicates that concussions are more likely to occur earlier in the game (centered at 15 to 25 snaps). The frequency of concussion peaks at this bin and decreases gradually as the number of snaps increases.
 
-```{r chart2, echo = FALSE, include = FALSE}
+```{r chart2, echo = FALSE, message = FALSE}
 source("../source/Chart2.R", print.eval = TRUE)
 library(leaflet)
 library(knitr)
 ```
 
-### This chart shows the frequency in which concussions occurred over the course of the season. It is somewhat clear that there is a slight correlation to how early in the season the concussion occurred and the frequency that other concussions occured. In other words, in earlier weeks during the season, it appears slightly more concussion occur. 
+#### This chart shows the frequency in which concussions occurred over the course of the season. It is somewhat clear that there is a slight correlation to how early in the season the concussion occurred and the frequency that other concussions occured. In other words, in earlier weeks during the season, it appears slightly more concussion occur. 
 
 ```{r chart3, echo = FALSE}
 source("../source/Chart3.R")
 ```
 
-### This chart shows the number of games that concussed players missed due to their injury. Clearly, the plurality and majority of players did not miss any games due to their concussion, with a steep decrease in the number of games missed after every week. This chart could show that the NFL does not have enough regualation in their concussion protocols. 
+#### This chart shows the number of games that concussed players missed due to their injury. Clearly, the plurality and majority of players did not miss any games due to their concussion, with a steep decrease in the number of games missed after every week. This chart could show that the NFL does not have enough regualation in their concussion protocols. 
 
 # The Concussion Conundrum
 
