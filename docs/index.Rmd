@@ -5,33 +5,35 @@ date: "2/18/2022"
 output: html_document
 ---
 
-```{r chart1, echo = FALSE}
-source("../source/Chart1.R")
-library(tidyverse)
-library(ggplot2)
+```{r table, echo = FALSE}
+library(dplyr)
+library(stringr)
+library(data.table)
+source("../source/table.R")
 ```
 
-### This chart shows
+
+```{r chart1, echo = FALSE}
+library(ggplot2)
+library(knitr)
+source("../source/Chart1.R")
+```
+
+### This chart was intended to show if there is a relationship between the number of snaps taken before concussion and the frequency at which concussions occur at the given number of snaps. The chart indicates that concussions are more likely to occur earlier in the game (centered at 15 to 25 snaps). The frequency of concussion peaks at this bin and decreases gradually as the number of snaps increases.
 
 ```{r chart2, echo = FALSE}
-source("../source/Chart2.R")
-library(tidyverse)
-library(ggplot2)
-library(dplyr)
 library(leaflet)
+library(knitr)
+source("../source/Chart2.R")
 ```
 
-### This chart shows
+### This chart shows the frequency in which concussions occurred over the course of the season. It is somewhat clear that there is a slight correlation to how early in the season the concussion occurred and the frequency that other concussions occured. In other words, in earlier weeks during the season, it appears slightly more concussion occur. 
 
 ```{r chart3, echo = FALSE}
 source("../source/Chart3.R")
-library(tidyverse)
-library(ggplot2)
-library(dplyr)
-library(leaflet)
 ```
 
-### This chart shows
+### This chart shows the number of games that concussed players missed due to their injury. Clearly, the plurality and majority of players did not miss any games due to their concussion, with a steep decrease in the number of games missed after every week. This chart could show that the NFL does not have enough regualation in their concussion protocols. 
 
 # The Concussion Conundrum
 
