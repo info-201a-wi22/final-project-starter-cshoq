@@ -2,17 +2,22 @@
 
 library(shiny)
 
+position_choices <- unique(concussions$Position)
 
 sidebar_content <- sidebarPanel(
-  # Interactive widget
+  checkboxGroupInput(
+    "Position",
+    label = "Position(s)",
+    choices = position_choices
+  )
 )
 
 main_content <- mainPanel(
   plotOutput("Chart3"),
-  p("Description of chart 3.")
+  p("Description of chart.")
 )
 
-chart_1_panel <- tabPanel(
+chart_3_panel <- tabPanel(
   "Panel Name",
   titlePanel("Title"),
   sidebarLayout(

@@ -1,4 +1,3 @@
-setwd("~/INFO201Assignments/Project/final-project-starter-cshoq")
 
 library(plotly)
 library(shiny)
