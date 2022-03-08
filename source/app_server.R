@@ -16,4 +16,14 @@ server <- function(input, output) {
       xlab("Snaps Before Injury") + ylab("# of players")
     p
   })
+  
+  # Chart 2 
+  output$Chart2 <- renderPlot ({
+    # code for chart 2 plot
+  })
+  
+  # Chart 3
+  output$Chart3 <- renderPlot ({
+    # code for chart 2 plot
+  })
 }
