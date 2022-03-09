@@ -7,7 +7,7 @@ source("tabs/tab_chart_2.R")
 source("tabs/tab_chart_3.R")
 source("tabs/tab_summary.R")
 source("tabs/tab_report.R")
-source("docs/p03-report.md")
+# source("docs/P03-report.Rmd")
 
 
 page_one <- tabPanel(
@@ -90,10 +90,10 @@ page_five <- tabPanel(
   
 )
 
-page_six <- tabPanel(
-  "Project Report",
-  includeMarkdown("po3-report.md")
-)
+# page_six <- tabPanel(
+#  "Project Report",
+#  includeMarkdown("P03-report.Rmd")
+# )
 
 
 
@@ -113,5 +113,5 @@ ui <- navbarPage(
   page_five,
   
   # The project report
-  page_six
+  # page_six
 )
