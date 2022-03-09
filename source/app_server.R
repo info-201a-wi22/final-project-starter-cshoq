@@ -3,6 +3,8 @@ library(tidyverse)
 library(ggplot2)
 library(data.table)
 
+# Data rearangment misc.
+
 concussions <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-cshoq/main/data/Concussion-Injuries-2012-2014.csv")
 
 concussion_no <- concussions %>% filter(Pre.Season.Injury. == "No")
@@ -37,6 +39,10 @@ absence_data <- select(concussions, Games.Missed)
 absence_table <- data.frame(table(absence_data$Games.Missed))
 absence_freq <- as.vector((absence_table$Freq))
 
+week_data <- select(concussions, Week.of.Injury)
+week_table <- data.frame(table(week_data$Week.of.Injury))
+week_table <- week_table %>%
+  rename(Week = Var1)
 
 server <- function(input, output) {
   
@@ -91,7 +97,9 @@ server <- function(input, output) {
   
   # Summary Chart 2
   output$ChartS2 <- renderPlot({
-    u <- plot(absence_freq, type = "o" , xlab = "Games Missed Post concussion", ylab = "Frequency", main = "Games Missed Due to Concussions Chart")
+    u <- ggplot(week_table, aes(x=Week, y=Freq)) + 
+      geom_point(size=5) +
+      ggtitle("Week of Season in Which Concussions Occurred")
     u
   })
   

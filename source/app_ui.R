@@ -1,13 +1,7 @@
 
 library(shiny)
-
-source("tabs/tab_intro.R")
-source("tabs/tab_chart_1.R")
-source("tabs/tab_chart_2.R")
-source("tabs/tab_chart_3.R")
-source("tabs/tab_summary.R")
-source("tabs/tab_report.R")
-# source("docs/P03-report.Rmd")
+library(knitr)
+library(markdown)
 
 
 page_one <- tabPanel(
@@ -31,7 +25,7 @@ page_two <- tabPanel(
   
   main_content <- mainPanel(
     plotOutput("Chart1"),
-    p("Description of chart.")
+    p("As we can see, players generally played about 15-40 snaps before being diagnosed with a concussion. There is also a clear left skew, as the game goes on and snaps falter to exist (or in other words, some games individual players don't play enough snaps), we see fewer concussions.")
   )
 )
 
@@ -72,7 +66,7 @@ page_four <- tabPanel(
     ),
     main_content <- mainPanel(
       plotOutput("Chart3"),
-      p("Description of chart.")
+      p("We can see there are clear discrepencies between players playing certain positions and their concussion chances. Cornerback and wide receiver (two positions that go head-to-head), seem to be the most dangerous in regards to concussions. ")
     )
   )
 )
@@ -85,33 +79,44 @@ page_five <- tabPanel(
   tableOutput("Table"),
   p("Another key takeaway from the data is the frequencies in which each position gets injured, as both sides of the football are affected and play differently. Based on the table displayed, we can see that a majority of the concussions from the data set are on the defensive side of the ball, which creates the case that the risk of concussion simply increases or decreases based on what position you decide to play. There really is nothing the NFL can do to limit or decrease this trend unless they completely eliminate the physicality of the defense or offense- which they have attempted to do throughout the years, but the result still stands. This takeaway once again plays back into what the NFL could do, and what they couldn't do due to the backlash both from the fans, and players."),
   plotOutput("ChartS2"),
-  p("The final key takeaway from the exploration of this data is the general recovery of the concussions, and how many games or weeks a player takes off after a concussion. We see that the average time a player takes off after a concussion is about a week, or a game- and according to data a concussion takes around 10-14 days to recover. We see that with this finding, players are not taking the optimal time to recover from their injury, which could lead to repeat injuries and long-term injuries. Although there aren't many solutions or clear cut answers to this problem, the NFL should create rules around the return of the player after the injury and not allow them to come back unless they meet a certain recovery threshold. 
-")
-  
+  p("The final key takeaway from the exploration of this data is the week of the season that concussions occurred. We can see that although generally concussion are equally spread throughout the season, week one can be dangerous. This is likely since players haven't seen the playing field in nearly 8 months and are unfamiliar with how they are supposed to make contact with other players. The NFL should surely take some precautions to increase safety in week 1.")
 )
 
-# page_six <- tabPanel(
-#  "Project Report",
-#  includeMarkdown("P03-report.Rmd")
-# )
+page_six <- tabPanel(
+  "Project Report",
+  htmltools::includeMarkdown("po3-report.md")
+)
 
-
-
-ui <- navbarPage(
-  title = "Project Example",
-  position = "fixed-top",
-  
+ui <- fluidPage(
+  titlePanel("The Concussion Conundrum"),
+  tags$head(
+    tags$style(HTML("
+      @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+      body {
+        background-color: grey;
+        color: white;
+      }
+      h2 {
+        font-family: 'Yusei Magic', sans-serif;
+      }
+      .shiny-input-container {
+        color: #474747;
+      }"))
+  ),
+  tabsetPanel(
+    type = "tabs",
+ 
   # The project introduction
-  page_one,
+    page_one,
   
   # The three charts
-  page_two,
-  page_three,
-  page_four,
+    page_two,
+    page_three,
+    page_four,
   
   # The project summary
-  page_five,
+    page_five,
   
   # The project report
-  # page_six
-)
+    page_six
+))

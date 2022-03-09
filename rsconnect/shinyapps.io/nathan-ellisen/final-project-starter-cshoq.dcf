@@ -1,0 +1,14 @@
+name: final-project-starter-cshoq
+title: final-project-starter-cshoq
+username:
+account: nathan-ellisen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5812627
+bundleId: 5660125
+url: https://nathan-ellisen.shinyapps.io/final-project-starter-cshoq/
+when: 1646812840.74494
+lastSyncTime: 1646812840.74494
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: _config.yml|data/Concussion-Injuries-2012-2014.csv|data/example.csv|data/README.md|instructions/project-design-brief.pdf|instructions/README.md|LICENSE|README.md
